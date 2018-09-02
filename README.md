@@ -1,1 +1,1 @@
-# stanford-courses
+iTunes U Stanford Courses
