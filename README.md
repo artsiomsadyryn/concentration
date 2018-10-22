@@ -1,1 +1,1 @@
-# Game app from iTunes U Stanford Courses
+# Game app from iTunes U Stanford Course
