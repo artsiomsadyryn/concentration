@@ -14,7 +14,7 @@ struct Concentration {
     
     private var indexOneAndOnlyFaceUpCard: Int? {
         
-        get {
+        get { 
             var foundIndex: Int?
             for index in cards.indices {
                 if cards[index].isFaceUp {
