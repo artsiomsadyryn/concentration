@@ -59,6 +59,11 @@ class ConcentrationViewController: UIViewController {
         flipCountLabel.attributedText = attributedString
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViewFromModel()
+    }
+    
     @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = visibleCardButtons.index(of: sender) {
