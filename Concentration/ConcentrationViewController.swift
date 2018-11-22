@@ -13,7 +13,7 @@ class ConcentrationViewController: UIViewController {
     // MARK: Properties
     
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
-    
+     
     var numberOfPairsOfCards: Int {
         return (cardButtons.count + 1) / 2
     }
