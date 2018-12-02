@@ -13,11 +13,9 @@ struct Concentration {
     private(set) var cards = [Card]()
     
     private var indexOneAndOnlyFaceUpCard: Int? {
-        
         get { 
             return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
         }
-        
         set {
             for index in cards.indices {
                 if index == newValue{
@@ -55,6 +53,7 @@ struct Concentration {
             let card = Card()
             cards += [card, card]
         }
+        cards.shuffle()
     }
     
     //TODO: Shuffle the cards
