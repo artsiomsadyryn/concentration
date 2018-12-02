@@ -34,13 +34,15 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
     }
     
     @IBAction func chooseTheme(_ sender: Any) {
-        if let cvc = splitViewDetailConcentrationViewController {
+        if let cvc = splitViewDetailConcentrationViewController { // только для iPad, если юзер в режиме Split View выбрал другую тему
             if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName] {
                 cvc.theme = theme
+                cvc.title = themeName
             }
-        } else if let cvc = lastSeguedToConcentrationViewController {
+        } else if let cvc = lastSeguedToConcentrationViewController { // если уже была начата игра, но юзер перешел Назад и выбрал другую тему
             if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName] {
                 cvc.theme = theme
+                cvc.title = themeName
             }
             navigationController?.pushViewController(cvc, animated: true)
         }
@@ -54,7 +56,7 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
             if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName] {
                 if let cvc = segue.destination as? ConcentrationViewController {
                     cvc.theme = theme
-                    
+                    cvc.title = themeName
                     lastSeguedToConcentrationViewController = cvc
                 }
             }
