@@ -54,6 +54,7 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
             if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName] {
                 if let cvc = segue.destination as? ConcentrationViewController {
                     cvc.theme = theme
+                    
                     lastSeguedToConcentrationViewController = cvc
                 }
             }
