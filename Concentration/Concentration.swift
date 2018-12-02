@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Concentration {
+struct Concentration
+{
     
     private(set) var cards = [Card]()
     
@@ -18,7 +19,7 @@ struct Concentration {
         }
         set {
             for index in cards.indices {
-                if index == newValue{
+                if index == newValue {
                     cards[index].isFaceUp = true
                 }
                 else {
@@ -55,8 +56,6 @@ struct Concentration {
         }
         cards.shuffle()
     }
-    
-    //TODO: Shuffle the cards
     
 }
 
